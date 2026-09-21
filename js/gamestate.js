@@ -137,7 +137,8 @@ class GameState {
             'layer_height': PRINT_ERRORS.under_extrusion,
             'infill': PRINT_ERRORS.under_extrusion,
             'no_supports': PRINT_ERRORS.spaghetti,
-            'adhesion': PRINT_ERRORS.bed_adhesion_failed
+            'adhesion': PRINT_ERRORS.bed_adhesion_failed,
+            'spaghetti': PRINT_ERRORS.spaghetti
         };
         return errorMap[errorType] || PRINT_ERRORS.under_extrusion;
     }
