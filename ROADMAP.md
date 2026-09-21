@@ -1,17 +1,19 @@
 # ROADMAP — Farma Drukarek 3D
 
-## ETAP 1: Prototyp Grywalny (MVP)
+## ETAP 1: Prototyp Grywalny (MVP) ✅ GOTOWY
 - [x] Struktura projektu (HTML5, JS, CSS)
 - [x] Zapis lokalny postępu
 - [x] Pierwsza drukarka (budżetowa)
-- [x] 3-4 przykładowe zlecenia (breloczki, figurki, części)
-- [x] Picker ustawień: materiał, temperatura, wysokość warstwy, wypełnienie, podpory
-- [x] Symulacja druku (skrócony czas)
-- [x] Wynik druku (idealny/dobry/z wadami/porażka) na podstawie ustawień
+- [x] 5 przykładowych zleceń (breloczki, figurki, części, części zamienna, dekoracja)
+- [x] Picker ustawień: materiał, temperatura, wysokość warstwy, wypełnienie, wzór, podpory, prędkość, przyczepność
+- [x] Symulacja druku (skrócony czas 2-10s)
+- [x] Wynik druku (idealny/dobry/ok/słabo/porażka) na podstawie ustawień
 - [x] System ocen klientów (gwiazdki 1-5)
-- [x] Zarabianie i zakup kolejnych zleceń
+- [x] Zarabianie na podstawie wyniku (mnożnik 1.0x do 0.0x)
 - [x] Interfejs mobilny (portrait, touch-friendly)
-- [x] Encyklopedia: krótkie opisy materiałów i ustawień
+- [x] Encyklopedia: 9 artykułów o druku 3D, rozblokowanie w trakcie gry
+- [x] Zapis i wczytywanie postępu
+- [x] Ekran ustawień gry (dźwięki, brak reklam, język)
 
 ## ETAP 2: Rozbudowa Mechanik (2-3 sesje)
 - [ ] Druga drukarka (lepsze możliwości)

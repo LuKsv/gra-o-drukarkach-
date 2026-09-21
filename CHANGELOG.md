@@ -48,8 +48,14 @@
 - Brak zarządzania wilgocią filamentu
 - Reklamy tylko atrapą (przyciski bez funkcji)
 
+### Poprawki (zmiana-1)
+- Naprawiono mapowanie błędu spaghetti w getErrorName
+
 ### Plan Następny (Etap 2)
 - Druga drukarka + możliwość równoczesnych drukow
 - Ulepszenia dla drukarek
 - Magazyn filamentów z symulacją wilgoci
 - Więcej typów zleceń
+- Prawidłowe testowanie w przeglądarce
+- Balansowanie trudności
+- Dodatkowe artykuły encyklopedii dla każdego typu błędu
