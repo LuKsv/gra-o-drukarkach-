@@ -42,9 +42,8 @@
 - **Dokumentacja**: ROADMAP.md, CHANGELOG.md, DESIGN.md
 
 ### Znane problemy
-- Ikona menu („☰") dodawana dynamicznie — do poprawy wizualnie
 - Kalkulacja czasu druku jest uproszczona (nie uwzględnia geometrii modelu)
-- Problem w data.js: zmienna `timeTime` powinna być `timeMinutes`
+- Demo czas druku to 10 sekund (produkcja: 1-2h) — do umowy w GAME_CONFIG
 
 ### Do przetestowania
 - [ ] Gra uruchamia się bez błędów
