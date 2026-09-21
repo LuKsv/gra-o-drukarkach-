@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Farma Drukarek 3D - gra o druku 3D">
+    <title>Farma Drukarek 3D</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Dashboard -->
+        <div id="view-dashboard" class="view active">
+            <header class="app-header">
+                <h1>🖨️ Farma Drukarek 3D</h1>
+                <div class="header-buttons">
+                    <button id="btn-encyclopedia" class="btn-icon" title="Encyklopedia">📖</button>
+                    <button id="btn-settings" class="btn-icon" title="Ustawienia">⚙️</button>
+                </div>
+            </header>
+
+            <section class="dashboard-stats">
+                <div class="stat-box">
+                    <div class="stat-label">Pieniądze</div>
+                    <div class="stat-value" id="stat-money">0 PLN</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Drukarki</div>
+                    <div class="stat-value" id="stat-printers">1</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-label">Reputation</div>
+                    <div class="stat-value" id="stat-reputation">⭐⭐⭐</div>
+                </div>
+            </section>
+
+            <section class="orders-section">
+                <h2>Dostępne zlecenia</h2>
+                <div id="orders-list" class="orders-list">
+                    <!-- Orders rendered here -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Order Detail -->
+        <div id="view-order" class="view">
+            <header class="app-header">
+                <button id="btn-back-order" class="btn-back">← Powrót</button>
+                <h2 id="order-title">Zlecenie</h2>
+            </header>
+
+            <section id="order-detail" class="order-detail">
+                <!-- Order details rendered here -->
+            </section>
+
+            <section class="settings-panel">
+                <h3>Ustawienia druku</h3>
+                <form id="print-settings-form">
+                    <!-- Settings rendered here -->
+                </form>
+            </section>
+
+            <button id="btn-start-print" class="btn-primary btn-large">Zacznij druk!</button>
+        </div>
+
+        <!-- Printing Simulation -->
+        <div id="view-printing" class="view">
+            <header class="app-header">
+                <h2>🖨️ Drukowanie...</h2>
+            </header>
+
+            <section class="printing-container">
+                <div id="printing-animation" class="printing-animation">
+                    <div class="printer-model">
+                        <div class="printer-box"></div>
+                        <div class="nozzle"></div>
+                        <div class="filament" id="filament-progress"></div>
+                    </div>
+                </div>
+
+                <div class="printing-info">
+                    <div id="printing-time" class="printing-time">Czas: 0s / 8s</div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <button id="btn-fast-forward" class="btn-secondary">Szybciej! ⏩</button>
+            </section>
+        </div>
+
+        <!-- Result -->
+        <div id="view-result" class="view">
+            <header class="app-header">
+                <h2 id="result-title">Wynik druku</h2>
+            </header>
+
+            <section class="result-container">
+                <div id="result-status" class="result-status">
+                    <!-- Status rendered here -->
+                </div>
+
+                <div id="result-explanation" class="result-explanation">
+                    <!-- Explanation rendered here -->
+                </div>
+
+                <div class="result-earnings">
+                    <div class="earning-item">
+                        <span>Cena zlecenia:</span>
+                        <span id="result-base-price">0 PLN</span>
+                    </div>
+                    <div class="earning-item">
+                        <span>Mnożnik wyniku:</span>
+                        <span id="result-multiplier">1.0x</span>
+                    </div>
+                    <div class="earning-item total">
+                        <span>Do zarobienia:</span>
+                        <span id="result-total" class="earnings-total">0 PLN</span>
+                    </div>
+                </div>
+
+                <button id="btn-collect-reward" class="btn-primary btn-large">Zbierz nagrodę 💰</button>
+            </section>
+        </div>
+
+        <!-- Encyclopedia -->
+        <div id="view-encyclopedia" class="view">
+            <header class="app-header">
+                <button id="btn-back-encyclopedia" class="btn-back">← Powrót</button>
+                <h2>📖 Encyklopedia</h2>
+            </header>
+
+            <section class="encyclopedia-content">
+                <div id="encyclopedia-list" class="encyclopedia-list">
+                    <!-- Articles rendered here -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Settings -->
+        <div id="view-settings" class="view">
+            <header class="app-header">
+                <button id="btn-back-settings" class="btn-back">← Powrót</button>
+                <h2>⚙️ Ustawienia</h2>
+            </header>
+
+            <section class="settings-content">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="setting-sound" checked>
+                    <span>Dźwięki</span>
+                </label>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" id="setting-no-ads">
+                    <span>Brak reklam (Pro - 9.99 PLN) [ATRAP]</span>
+                </label>
+
+                <div class="settings-section">
+                    <h3>Język</h3>
+                    <select id="setting-language">
+                        <option value="pl">Polski</option>
+                        <option value="en">English (soon)</option>
+                    </select>
+                </div>
+
+                <button id="btn-reset-game" class="btn-danger">Resetuj grę (usuń wszystkie dane)</button>
+                <small>Uwaga: tej akcji nie można cofnąć!</small>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/gamestate.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
